@@ -1,0 +1,7 @@
+{
+  "extra": {
+      "expose": [
+          "themes/app/dist"
+      ]
+  }
+}
