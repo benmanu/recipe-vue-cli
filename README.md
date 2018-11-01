@@ -5,14 +5,14 @@
 yarn install
 ```
 
-### Compiles and hot-reloads for development
+### Compiles and watches for development
 ```
-yarn run serve
+yarn run dev
 ```
 
 ### Compiles and minifies for production
 ```
-yarn run build
+yarn run prod
 ```
 
 ### Run your tests
@@ -23,9 +23,4 @@ yarn run test
 ### Lints and fixes files
 ```
 yarn run lint
-```
-
-### Run your unit tests
-```
-yarn run test:unit
 ```
