@@ -1,0 +1,4 @@
+SilverStripe\View\SSViewer:
+  themes:
+    - app
+    - '$default'

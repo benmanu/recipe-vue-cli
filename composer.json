@@ -18,13 +18,14 @@
       "README.md",
       "vue.config.js",
       "yarn.lock",
-      "client/public/*",
-      "client/src/*",
+      "app/_config/theme.yml",
+      "themes/app/assets/*",
+      "themes/app/src/*",
       "docs/*",
       "themes/app/templates/*"
     ],
     "public-files": [
-      "client/dist/*"
+      "themes/app/dist"
     ]
   },
   "prefer-stable": true,
