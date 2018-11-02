@@ -1,26 +1,5 @@
 # vue-ss-boilerplate
 
-## Project setup
-```
-yarn install
-```
+An opinionated frontend build for SilverStripe 4 sites.
 
-### Compiles and watches for development
-```
-yarn run dev
-```
-
-### Compiles and minifies for production
-```
-yarn run prod
-```
-
-### Run your tests
-```
-yarn run test
-```
-
-### Lints and fixes files
-```
-yarn run lint
-```
+See the [frontent build documentation](./docs/en/frontend-build.md) for more information.

@@ -2,14 +2,19 @@
   "name": "vue-ss-boilerplate",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=8"
+  },
   "scripts": {
     "dev": "vue-cli-service build --watch --mode=development",
     "prod": "yarn run build",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "test": "vue-cli-service test:unit"
+    "test": "vue-cli-service test:unit",
+    "audit": "synp --source-file yarn.lock && npm audit; rm -f package-lock.json"
   },
   "dependencies": {
+    "lodash": "^4.17.11",
     "vue": "^2.5.17",
     "vuex": "^3.0.1"
   },
@@ -27,6 +32,7 @@
     "eslint-plugin-vue": "^5.0.0-0",
     "less": "^3.0.4",
     "less-loader": "^4.1.0",
+    "synp": "^1.3.2",
     "vue-axe": "^1.0.7",
     "vue-template-compiler": "^2.5.17"
   }
