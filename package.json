@@ -14,9 +14,6 @@
     "test:update": "jest --updateSnapshot",
     "audit": "synp --source-file yarn.lock && npm audit; rm -f package-lock.json"
   },
-  "gitHooks": {
-    "pre-commit": "yarn run lint && yarn run test"
-  },
   "dependencies": {
     "lodash": "^4.17.11",
     "vue": "^2.5.17",

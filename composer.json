@@ -1,7 +1,32 @@
 {
+  "name": "benmanu/recipe-vue-cli-ss-boilerplate",
+  "description": "SilverStripe recipe for Vue CLI",
+  "type": "silverstripe-recipe",
+  "require": {
+    "silverstripe/recipe-plugin": "^1"
+  },
   "extra": {
-      "expose": [
-          "themes/app/dist"
-      ]
-  }
+    "project-files": [
+      ".browserslistrc",
+      ".editorconfig",
+      ".eslintrc.js",
+      ".gitignore",
+      "babel.config.js",
+      "jest.config.js",
+      "package.json",
+      "postcss.config.js",
+      "README.md",
+      "vue.config.js",
+      "yarn.lock",
+      "client/public/*",
+      "client/src/*",
+      "docs/*",
+      "themes/app/templates/*"
+    ],
+    "public-files": [
+      "client/dist/*"
+    ]
+  },
+  "prefer-stable": true,
+  "minimum-stability": "dev"
 }
