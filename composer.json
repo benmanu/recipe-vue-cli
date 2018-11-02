@@ -23,9 +23,6 @@
       "themes/app/src/*",
       "docs/*",
       "themes/app/templates/*"
-    ],
-    "public-files": [
-      "themes/app/dist"
     ]
   },
   "prefer-stable": true,
