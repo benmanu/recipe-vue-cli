@@ -44,6 +44,12 @@ yarn run build
 yarn run test
 ```
 
+### Update the test snapshots
+
+```bash
+yarn run test:update
+```
+
 ### Lint the files
 
 ```bash
