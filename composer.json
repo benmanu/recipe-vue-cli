@@ -1,5 +1,5 @@
 {
-  "name": "benmanu/recipe-vue-cli-ss-boilerplate",
+  "name": "benmanu/recipe-vue-cli",
   "description": "SilverStripe recipe for Vue CLI",
   "type": "silverstripe-recipe",
   "require": {
