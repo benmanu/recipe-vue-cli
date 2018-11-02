@@ -2,6 +2,7 @@
 
 An opinionated frontend build using the Vue CLI suite.
 
+- Vue CLI - Dependency management and build tooling
 - Vue - Javascript framework
 - VueX - Javascript framework global state management
 - aXe - Accessibility audit
@@ -86,6 +87,10 @@ Having both the `Banner.vue` component and `Banner.spec.vue` test in the same fo
 
 ### /public
 
+## Vue CLI
+
+The CLI tool can be spun up by running `vue ui` on the command line.
+
 ## Assets
 
 ## Tests
@@ -105,3 +110,5 @@ The [vue-test-utils](https://vue-test-utils.vuejs.org/) are included to provide 
 ## Accessibility audit
 
 ## Security audit
+
+## Git hooks
