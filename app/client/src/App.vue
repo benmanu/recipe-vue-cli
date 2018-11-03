@@ -29,5 +29,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="less">
+// css reset
+@import "utilities/reset.less";
 </style>
