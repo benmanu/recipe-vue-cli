@@ -1,4 +1,5 @@
 SilverStripe\View\SSViewer:
   themes:
+    - '$public'
     - app
     - '$default'

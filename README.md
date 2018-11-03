@@ -18,7 +18,7 @@ Add the following to the project `composer.json` file config.
 
 ```json
 {
-  expose: {
+  "expose": {
     "themes/app/dist"
   }
 }
