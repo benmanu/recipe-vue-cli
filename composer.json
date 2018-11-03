@@ -18,10 +18,10 @@
       "vue.config.js",
       "yarn.lock",
       "app/_config/theme.yml",
-      "themes/app/assets/*",
-      "themes/app/src/*",
-      "docs/*",
-      "themes/app/templates/*"
+      "app/client/assets/*",
+      "app/client/src/*",
+      "app/templates/*",
+      "docs/*"
     ]
   },
   "prefer-stable": true,

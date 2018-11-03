@@ -11,13 +11,13 @@ module.exports = {
     '^.+\\.jsx?$': 'babel-jest',
   },
   moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/themes/app/src/$1',
+    '^@/(.*)$': '<rootDir>/app/client/src/$1',
   },
   snapshotSerializers: [
     'jest-serializer-vue',
   ],
   testMatch: [
-    '<rootDir>/themes/app/src/**/*.spec.js',
+    '<rootDir>/app/client/src/**/*.spec.js',
   ],
   testURL: 'http://localhost/',
 };

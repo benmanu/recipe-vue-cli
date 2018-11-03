@@ -5,15 +5,14 @@
 const path = require('path');
 
 module.exports = {
-  baseUrl: '/dist/',
-  outputDir: 'themes/app/dist',
+  baseUrl: '/resources/app/client/dist/',
+  outputDir: 'app/client/dist',
   filenameHashing: false,
   lintOnSave: 'error',
-  indexPath: '../templates/Page.ss',
   pages: {
     index: {
-      entry: 'themes/app/src/main.js',
-      template: 'themes/app/assets/Page.template.html',
+      entry: 'app/client/src/main.js',
+      template: 'app/client/assets/index.html',
     },
   },
   configureWebpack: (config) => {
@@ -21,18 +20,17 @@ module.exports = {
      * Modify the `@` alias root.
      */
     /* eslint-disable-next-line */
-    config.resolve.alias['@'] = path.resolve(__dirname, 'themes/app/src');
+    config.resolve.alias['@'] = path.resolve(__dirname, 'app/client/src');
   },
   chainWebpack: (config) => {
     /**
-     * Modify the copy directory from `public` to `themes/app/assets`.
+     * Modify the copy directory from `public` to `app/client/assets`.
      */
     config
       .plugin('copy')
       .tap((args) => {
         /* eslint-disable-next-line */
-        args[0][0].from = path.resolve(__dirname, 'themes/app/assets');
-        args[0][0].ignore.push('Page.template.html');
+        args[0][0].from = path.resolve(__dirname, 'app/client/assets');
         return args;
       });
   },
