@@ -1,0 +1,4 @@
+export default {
+  OPEN_MAIN_NAV: 'OPEN_MAIN_NAV',
+  CLOSE_MAIN_NAV: 'CLOSE_MAIN_NAV',
+};

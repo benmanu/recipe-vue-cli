@@ -1,5 +1,10 @@
+import types from '@/store/types';
+
 export default {
-  setContent(state, { content }) {
-    state.content = content;
+  [types.OPEN_MAIN_NAV](state) {
+    state.isMainNavOpen = true;
+  },
+  [types.CLOSE_MAIN_NAV](state) {
+    state.isMainNavOpen = false;
   },
 };

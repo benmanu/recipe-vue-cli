@@ -13,10 +13,10 @@
       ".gitignore",
       "babel.config.js",
       "jest.config.js",
+      "less.config.js",
       "package.json",
       "postcss.config.js",
       "vue.config.js",
-      "yarn.lock",
       "app/_config/theme.yml",
       "app/client/assets/*",
       "app/client/html/*",
@@ -24,7 +24,8 @@
       "app/templates/includes/BodyScripts.ss",
       "app/templates/includes/HeadScripts.ss",
       "app/templates/Page.ss",
-      "docs/*"
+      "docs/en/frontend-build.md",
+      "docs/en/frontend-development.md"
     ]
   },
   "prefer-stable": true,

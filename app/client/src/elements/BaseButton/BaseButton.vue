@@ -1,5 +1,5 @@
 <template>
-  <button>{{ text }}</button>
+  <button @click="onClick">{{ text }}</button>
 </template>
 
 <script>
@@ -9,6 +9,10 @@ export default {
     text: {
       type: String,
       default: 'Button',
+    },
+    onClick: {
+      type: Function,
+      default: () => {},
     },
   },
 };

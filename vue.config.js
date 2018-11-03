@@ -5,6 +5,7 @@
 /* eslint-disable-next-line */
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
+const lessConfig = require('./less.config');
 
 module.exports = {
   baseUrl: '/resources/app/client/dist/',
@@ -15,6 +16,11 @@ module.exports = {
     index: {
       entry: 'app/client/src/main.js',
       template: 'app/client/html/index.html',
+    },
+  },
+  css: {
+    loaderOptions: {
+      less: lessConfig,
     },
   },
   configureWebpack: (config) => {
@@ -46,10 +52,14 @@ module.exports = {
   },
   chainWebpack: (config) => {
     /**
-     * Disabled inbuilt html webpack plugin.
+     * Modify the copy directory from `public` to `app/client/assets`.
      */
-    config.plugins.delete('html');
-    config.plugins.delete('preload');
-    config.plugins.delete('prefetch');
+    config
+      .plugin('copy')
+      .tap((args) => {
+        /* eslint-disable-next-line */
+        args[0][0].from = path.resolve(__dirname, 'app/client/assets');
+        return args;
+      });
   },
 };

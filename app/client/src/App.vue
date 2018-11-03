@@ -1,11 +1,13 @@
 <template>
   <div>
-    <header></header>
+    <header>
+      <BaseButton text="Toggle Nav" :on-click="toggleMainNav" />
+      <MainNav :is-open="isMainNavOpen" :items="mainNavItems" />
+    </header>
     <main>
       <h1>App</h1>
-      <article>{{ content }}</article>
-      <HelloWorld msg="Hello, world!" />
-      <BaseButton />
+      <BaseContent v-if="content" :content="content" />
+      <Tiles />
     </main>
     <footer></footer>
   </div>
@@ -17,19 +19,33 @@
  * Renders out the child components, and provides some global styles.
  */
 
-import { mapState } from 'vuex';
+import { mapState, mapActions } from 'vuex';
 
 export default {
   name: 'App',
   computed: {
     ...mapState({
+      isMainNavOpen: state => state.isMainNavOpen,
+      mainNavItems: state => state.mainNavItems,
+    }),
+    ...mapState('content', {
       content: state => state.content,
     }),
+  },
+  methods: {
+    ...mapActions([
+      'toggleMainNav',
+    ]),
   },
 };
 </script>
 
 <style lang="less">
-// css reset
 @import "utilities/reset.less";
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
 </style>
