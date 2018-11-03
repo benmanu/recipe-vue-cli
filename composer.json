@@ -19,8 +19,11 @@
       "yarn.lock",
       "app/_config/theme.yml",
       "app/client/assets/*",
+      "app/client/html/*",
       "app/client/src/*",
-      "app/templates/*",
+      "app/templates/includes/BodyScripts.ss",
+      "app/templates/includes/HeadScripts.ss",
+      "app/templates/Page.ss",
       "docs/*"
     ]
   },

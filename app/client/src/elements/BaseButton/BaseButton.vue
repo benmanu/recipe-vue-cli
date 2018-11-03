@@ -6,7 +6,10 @@
 export default {
   name: 'BaseButton',
   props: {
-    text: String,
+    text: {
+      type: String,
+      default: 'Button',
+    },
   },
 };
 </script>
