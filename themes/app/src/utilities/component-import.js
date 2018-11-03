@@ -1,10 +1,10 @@
-import Vue from 'vue';
-import upperFirst from 'lodash/upperFirst';
-import camelCase from 'lodash/camelCase';
-
 /**
  * @see {@link https://vuejs.org/v2/guide/components-registration.html#Automatic-Global-Registration-of-Base-Components}
  */
+
+import Vue from 'vue';
+import upperFirst from 'lodash/upperFirst';
+import camelCase from 'lodash/camelCase';
 
 function importAll(requireComponent) {
   requireComponent.keys().forEach((fileName) => {

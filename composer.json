@@ -15,7 +15,6 @@
       "jest.config.js",
       "package.json",
       "postcss.config.js",
-      "README.md",
       "vue.config.js",
       "yarn.lock",
       "app/_config/theme.yml",
