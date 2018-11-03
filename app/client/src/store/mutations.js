@@ -2,9 +2,13 @@ import types from '@/store/types';
 
 export default {
   [types.OPEN_MAIN_NAV](state) {
-    state.isMainNavOpen = true;
+    Object.assign(state, {
+      isMainNavOpen: true,
+    });
   },
   [types.CLOSE_MAIN_NAV](state) {
-    state.isMainNavOpen = false;
+    Object.assign(state, {
+      isMainNavOpen: false,
+    });
   },
 };
