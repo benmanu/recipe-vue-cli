@@ -46,14 +46,10 @@ module.exports = {
   },
   chainWebpack: (config) => {
     /**
-     * Modify the copy directory from `public` to `app/client/assets`.
+     * Disabled inbuilt html webpack plugin.
      */
-    config
-      .plugin('copy')
-      .tap((args) => {
-        /* eslint-disable-next-line */
-        args[0][0].from = path.resolve(__dirname, 'app/client/assets');
-        return args;
-      });
+    config.plugins.delete('html');
+    config.plugins.delete('preload');
+    config.plugins.delete('prefetch');
   },
 };
