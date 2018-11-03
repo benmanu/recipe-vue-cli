@@ -9,11 +9,11 @@ module.exports = {
   outputDir: 'themes/app/dist',
   filenameHashing: false,
   lintOnSave: 'error',
-  indexPath: 'themes/app/templates/Page.ss',
+  indexPath: '../templates/Page.ss',
   pages: {
     index: {
       entry: 'themes/app/src/main.js',
-      template: 'themes/app/src/Page.template.html',
+      template: 'themes/app/assets/Page.template.html',
     },
   },
   configureWebpack: (config) => {
@@ -32,6 +32,7 @@ module.exports = {
       .tap((args) => {
         /* eslint-disable-next-line */
         args[0][0].from = path.resolve(__dirname, 'themes/app/assets');
+        args[0][0].ignore.push('Page.template.html');
         return args;
       });
   },
