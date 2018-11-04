@@ -1,11 +1,18 @@
 <template>
-  <article v-html="content"></article>
+  <article>
+    <v-base-heading v-if="heading" :heading="heading"></v-base-heading>
+    <div v-html="content"></div>
+  </article>
 </template>
 
 <script>
 export default {
   name: 'BaseContent',
   props: {
+    heading: {
+      type: String,
+      default: '',
+    },
     content: {
       type: String,
       default: '',

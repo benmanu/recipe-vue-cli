@@ -11,12 +11,13 @@
 import Vue from 'vue';
 import upperFirst from 'lodash/upperFirst';
 import camelCase from 'lodash/camelCase';
+import kebabCase from 'lodash/kebabCase';
 
 /**
  * Format the fileName string into the componentName.
  * @param {string} fileName
  */
-function getComponentName(fileName) {
+function getFormattedFileName(fileName) {
   // get the componentName from the fileName
   let formattedFileName = fileName.split('/').pop();
   formattedFileName = formattedFileName.split('.').slice(0, -1).join('.');
@@ -26,14 +27,24 @@ function getComponentName(fileName) {
   return upperFirst(camelCase(formattedFileName));
 }
 
+/**
+ * Format the fileName string into the componentName.
+ * @param {string} fileName
+ */
+function getComponentName(formattedFileName) {
+  // format the componentName into kebab case
+  return `v-${kebabCase(formattedFileName)}`;
+}
+
 // get a list of all vue components in the '@/elements' directory and sub-folders.
 const requireElement = require.context('@/elements', true, /\.vue$/);
 
 requireElement.keys().forEach((fileName) => {
-  const componentName = getComponentName(fileName);
+  const formattedFileName = getFormattedFileName(fileName);
+  const componentName = getComponentName(formattedFileName);
 
   Vue.component(componentName, (resolve) => {
     /* eslint-disable-next-line */
-    require([`@/elements/${componentName}/${componentName}.vue`], resolve);
+    require([`@/elements/${formattedFileName}/${formattedFileName}.vue`], resolve);
   });
 });

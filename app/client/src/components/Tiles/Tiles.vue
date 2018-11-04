@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'Tiles',
   props: {
     tiles: {
       type: Array,

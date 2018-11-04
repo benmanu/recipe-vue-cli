@@ -1,4 +1,4 @@
-import types from '@/store/types';
+import types from '@/store/nav/types';
 
 export default {
   toggleMainNav({ dispatch, state }) {

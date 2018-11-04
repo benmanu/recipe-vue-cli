@@ -1,24 +1,15 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 
-import content from '@/store/content';
-
-import state from '@/store/state';
-import mutations from '@/store/mutations';
-import actions from '@/store/actions';
-import getters from '@/store/getters';
+import nav from '@/store/nav';
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
   modules: {
-    content: {
+    nav: {
       namespaced: true,
-      ...content,
+      ...nav,
     },
   },
-  state,
-  mutations,
-  actions,
-  getters,
 });

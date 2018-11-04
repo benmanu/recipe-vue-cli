@@ -15,9 +15,16 @@
         <strong>We're sorry but the site doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
     <div id="app">
-        <p>Loading...</p>
+        <v-app inline-template>
+            <div>
+                <% include Header %>
+                <main>
+                    $Layout
+                </main>
+                <% include Footer %>
+            </div>
+        </v-app>
     </div>
-    $Form
     <% include BodyScripts %>
 </body>
 </html>

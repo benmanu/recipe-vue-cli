@@ -14,6 +14,7 @@ module.exports = {
   outputDir: 'app/client/dist',
   filenameHashing: false,
   lintOnSave: 'error',
+  runtimeCompiler: true,
   pages: {
     index: {
       entry: 'app/client/src/main.js',

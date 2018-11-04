@@ -34,9 +34,6 @@ export default {
   }
 }
 
-.nav__item {
-}
-
 .nav__link {
   &.nav__link--active {
     font-weight: 700;
