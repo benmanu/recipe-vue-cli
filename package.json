@@ -11,8 +11,8 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "test": "vue-cli-service test:unit",
-    "test:update": "jest --updateSnapshot",
-    "audit": "synp --source-file yarn.lock && npm audit; rm -f package-lock.json"
+    "test:update": "vue-cli-service test:unit --updateSnapshot",
+    "audit": "yarn audit"
   },
   "dependencies": {
     "lodash": "^4.17.11",
