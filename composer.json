@@ -18,12 +18,10 @@
       "postcss.config.js",
       "vue.config.js",
       "app/_config/theme.yml",
-      "app/client/assets/*",
-      "app/client/html/*",
-      "app/client/src/*",
-      "app/templates/includes/BodyScripts.ss",
-      "app/templates/includes/HeadScripts.ss",
-      "app/templates/Page.ss",
+      "themes/app/assets/*",
+      "themes/app/html/*",
+      "themes/app/src/*",
+      "themes/app/templates/*",
       "docs/en/frontend-build.md",
       "docs/en/frontend-development.md"
     ]
