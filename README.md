@@ -1,4 +1,4 @@
-# vue-ss-boilerplate
+# recipe-vue-cli
 
 An opinionated frontend build for SilverStripe 4 sites.
 
