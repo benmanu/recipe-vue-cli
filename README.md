@@ -59,7 +59,6 @@ Add the following:
 ```
 .DS_Store
 node_modules
-/themes/app/dist/*
 
 # local env files
 .env.local
