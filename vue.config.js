@@ -10,15 +10,15 @@ const path = require('path');
 const lessConfig = require('./less.config');
 
 module.exports = {
-  baseUrl: '/resources/app/client/dist/',
-  outputDir: 'app/client/dist',
+  baseUrl: '/resources/themes/app/dist/',
+  outputDir: 'themes/app/dist',
   filenameHashing: false,
   lintOnSave: 'error',
   runtimeCompiler: true,
   pages: {
     index: {
-      entry: 'app/client/src/main.js',
-      template: 'app/client/html/index.html',
+      entry: 'themes/app/src/main.js',
+      template: 'themes/app/html/index.html',
     },
   },
   css: {
@@ -31,7 +31,7 @@ module.exports = {
      * Modify the `@` alias root.
      */
     Object.assign(config.resolve.alias, {
-      '@': path.resolve(__dirname, 'app/client/src'),
+      '@': path.resolve(__dirname, 'themes/app/src'),
     });
 
     /**
@@ -39,8 +39,8 @@ module.exports = {
      */
     config.plugins.push(new HTMLWebpackPlugin({
       inject: false,
-      filename: path.resolve(__dirname, 'app/templates/includes/HeadScripts.ss'),
-      template: 'app/client/html/head.html',
+      filename: path.resolve(__dirname, 'themes/app/templates/Includes/HeadScripts.ss'),
+      template: 'themes/app/html/head.html',
       chunks: ['head', 'index'],
     }));
 
@@ -49,8 +49,8 @@ module.exports = {
      */
     config.plugins.push(new HTMLWebpackPlugin({
       inject: false,
-      filename: path.resolve(__dirname, 'app/templates/includes/BodyScripts.ss'),
-      template: 'app/client/html/body.html',
+      filename: path.resolve(__dirname, 'themes/app/templates/Includes/BodyScripts.ss'),
+      template: 'themes/app/html/body.html',
       chunks: ['chunk-vendors', 'chunk-common', 'vendor', 'common', 'index'],
     }));
 
@@ -59,8 +59,8 @@ module.exports = {
      */
     config.plugins.push(new CopyWebpackPlugin([
       {
-        from: path.resolve(__dirname, 'app/client/assets'),
-        to: path.resolve(__dirname, 'app/client/dist/assets'),
+        from: path.resolve(__dirname, 'themes/app/assets'),
+        to: path.resolve(__dirname, 'themes/app/dist/assets'),
         toType: 'dir',
       },
     ]));

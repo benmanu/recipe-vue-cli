@@ -1,0 +1,1 @@
+.tiles[data-v-14e39ac0]{max-width:50%;display:grid;grid-gap:1rem;grid-template-columns:repeat(auto-fill,minmax(240px,1fr))}.tiles__tile[data-v-14e39ac0]{background-color:#444;color:#fff;border-radius:5px;padding:20px;float:left;width:50%;min-width:240px}@supports (display:grid){.tiles__tile[data-v-14e39ac0]{width:auto;min-width:auto}}
