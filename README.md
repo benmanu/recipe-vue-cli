@@ -80,6 +80,21 @@ yarn-error.log*
 *.sw*
 ```
 
+### app/_config/theme.yml
+
+Replace with the following:
+
+```yml
+---
+Name: mytheme
+---
+SilverStripe\View\SSViewer:
+  themes:
+    - '$public'
+    - 'app'
+    - '$default'
+```
+
 ## Guide
 
 See the [frontend build documentation](./docs/en/frontend-build.md) for more information.
