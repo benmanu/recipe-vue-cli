@@ -67,7 +67,7 @@ yarn run audit
 
 ### /src
 
-The source files (development files) are all placed in the `./app/client/src` directory. This directory has six main components.
+The source files (development files) are all placed in the `./themes/app/src` directory. This directory has six main components.
 
 1. `main.js`: Instantiates the Vue application, mounting to the `#app` element (default placed in `index.html` - see [/public](#public)).
 2. `App.vue`: Main Vue component that renders the page.
@@ -76,7 +76,7 @@ The source files (development files) are all placed in the `./app/client/src` di
 5. `elements/`: Smaller Vue elements. Can be standalone, or part of a component composition. Should not integrate into the VueX store.
 6. `utilities/`: Any helper utilities for the application.
 
-All `.vue` `/components` and `/elements` are automatically placed in the Vue context through `./themes/app/src/utilities/component-import.js`. That way you don't need to assign them to the application when a new component is created.
+All `.vue` `/elements` are automatically placed in the Vue context through `./themes/app/src/utilities/global-elements-import.js`. That way you don't need to assign them to the application when a new element is created. The downside of this approach is these elements are bundled together, so they don't take advantage of individual chunking. That's why the `components` are all assigned individually.
 
 Building a test in the same folder as the component/element provides a way of coupling the concerns of the test with the element, raises awareness and ownership.
 

@@ -8,28 +8,76 @@ An opinionated frontend build for SilverStripe 4 sites.
 composer require-recipe benmanu/recipe-vue-cli
 ```
 
-Update the recipe
+Update the recipe:
 
 ```bash
 composer update-recipe benmanu/recipe-vue-cli
 ```
 
-Add the following to the project `composer.json` file config.
+## Update project files
+
+These are some changes to make to the project to get everything up and running.
+
+### composer.json
+
+Add the following to the project `composer.json` file config:
 
 ```json
 {
   "extra": {
     "expose": [
-      "app/client"
+      "themes/app/dist"
     ]
   }
 }
 ```
 
-Then run
+Then run to sync it to the public directory:
 
 ```bash
 composer vendor-expose
+```
+
+### .editorconfig
+
+Add the following:
+
+```
+[*.{js,jsx,ts,tsx,vue}]
+indent_style = space
+indent_size = 2
+end_of_line = lf
+trim_trailing_whitespace = true
+insert_final_newline = true
+max_line_length = 100
+```
+
+### .gitignore
+
+Add the following:
+
+```
+.DS_Store
+node_modules
+/themes/app/dist/*
+
+# local env files
+.env.local
+.env.*.local
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw*
 ```
 
 ## Guide
