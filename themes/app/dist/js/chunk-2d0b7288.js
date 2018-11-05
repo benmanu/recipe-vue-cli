@@ -1,2 +1,0 @@
-(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d0b7288"],{"1fda":function(n,e,o){var t={"./BaseButton/BaseButton.vue":"843a","./BaseContent/BaseContent.vue":"5714","./BaseHeading/BaseHeading.vue":"88b9"};function a(n){var e=r(n);return o(e)}function r(n){var e=t[n];if(!(e+1)){var o=new Error("Cannot find module '"+n+"'");throw o.code="MODULE_NOT_FOUND",o}return e}a.keys=function(){return Object.keys(t)},a.resolve=r,n.exports=a,a.id="1fda"}}]);
-//# sourceMappingURL=chunk-2d0b7288.js.map

@@ -9,16 +9,24 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const path = require('path');
 const lessConfig = require('./less.config');
 
+// dir variables
+const themeDir = 'themes/app';
+const srcDir = `${themeDir}/src`;
+const distDir = `${themeDir}/dist`;
+const htmlDir = `${themeDir}/html`;
+const assetsDir = `${themeDir}/assets`;
+const templatesDir = `${themeDir}/templates`;
+
 module.exports = {
-  baseUrl: '/resources/themes/app/dist/',
-  outputDir: 'themes/app/dist',
+  baseUrl: `/resources/${distDir}/`,
+  outputDir: distDir,
   filenameHashing: false,
   lintOnSave: 'error',
   runtimeCompiler: true,
   pages: {
     index: {
-      entry: 'themes/app/src/main.js',
-      template: 'themes/app/html/index.html',
+      entry: `${srcDir}/main.js`,
+      template: `${htmlDir}/index.html`,
     },
   },
   css: {
@@ -31,7 +39,7 @@ module.exports = {
      * Modify the `@` alias root.
      */
     Object.assign(config.resolve.alias, {
-      '@': path.resolve(__dirname, 'themes/app/src'),
+      '@': path.resolve(__dirname, srcDir),
     });
 
     /**
@@ -39,8 +47,8 @@ module.exports = {
      */
     config.plugins.push(new HTMLWebpackPlugin({
       inject: false,
-      filename: path.resolve(__dirname, 'themes/app/templates/Includes/HeadScripts.ss'),
-      template: 'themes/app/html/head.html',
+      filename: path.resolve(__dirname, `${templatesDir}/Includes/HeadScripts.ss`),
+      template: `${htmlDir}/head.html`,
       chunks: ['head', 'index'],
     }));
 
@@ -49,8 +57,8 @@ module.exports = {
      */
     config.plugins.push(new HTMLWebpackPlugin({
       inject: false,
-      filename: path.resolve(__dirname, 'themes/app/templates/Includes/BodyScripts.ss'),
-      template: 'themes/app/html/body.html',
+      filename: path.resolve(__dirname, `${templatesDir}/Includes/BodyScripts.ss`),
+      template: `${htmlDir}/body.html`,
       chunks: ['chunk-vendors', 'chunk-common', 'vendor', 'common', 'index'],
     }));
 
@@ -59,8 +67,8 @@ module.exports = {
      */
     config.plugins.push(new CopyWebpackPlugin([
       {
-        from: path.resolve(__dirname, 'themes/app/assets'),
-        to: path.resolve(__dirname, 'themes/app/dist/assets'),
+        from: path.resolve(__dirname, `${assetsDir}`),
+        to: path.resolve(__dirname, `${distDir}/assets`),
         toType: 'dir',
       },
     ]));

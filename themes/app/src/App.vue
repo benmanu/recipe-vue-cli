@@ -3,7 +3,7 @@
  * Main Vue app component.
  * Renders an `inline-template` allowing components to be rendered
  * through the SilverStripe templates.
- * Used to map global handlers etc, and manage global styles.
+ * Used to map global handlers etc.
  */
 
 import { mapState, mapActions } from 'vuex';
@@ -23,13 +23,3 @@ export default {
   },
 };
 </script>
-
-<style lang="less">
-@import "utilities/reset.less";
-
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
-</style>
