@@ -20,10 +20,16 @@ Add the following to the project `composer.json` file config.
 {
   "extra": {
     "expose": [
-      "themes/app/dist"
+      "app/client"
     ]
   }
 }
+```
+
+Then run
+
+```bash
+composer vendor-expose
 ```
 
 ## Guide
