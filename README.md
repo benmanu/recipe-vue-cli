@@ -1,6 +1,6 @@
 # recipe-vue-cli
 
-An opinionated frontend build for SilverStripe 4 sites.
+An opinionated frontend build for SilverStripe 4 sites. Adds a new theme `app` containing all source files. Uses [Vue CLI](https://cli.vuejs.org/) to handle the frontend build. See the [docs](./docs/en/) for more details.
 
 ## Installation
 
