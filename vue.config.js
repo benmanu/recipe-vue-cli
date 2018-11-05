@@ -49,6 +49,7 @@ module.exports = {
       inject: false,
       filename: path.resolve(__dirname, `${templatesDir}/Includes/HeadScripts.ss`),
       template: `${htmlDir}/head.html`,
+      hash: true,
       chunks: ['head', 'index'],
     }));
 
@@ -59,6 +60,7 @@ module.exports = {
       inject: false,
       filename: path.resolve(__dirname, `${templatesDir}/Includes/BodyScripts.ss`),
       template: `${htmlDir}/body.html`,
+      hash: true,
       chunks: ['chunk-vendors', 'chunk-common', 'vendor', 'common', 'index'],
     }));
 
