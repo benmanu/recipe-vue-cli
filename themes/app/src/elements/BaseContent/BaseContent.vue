@@ -1,7 +1,7 @@
 <template>
   <article>
     <v-base-heading v-if="heading" :heading="heading"></v-base-heading>
-    <div v-html="content"></div>
+    <div v-if="content" v-html="content"></div>
   </article>
 </template>
 
